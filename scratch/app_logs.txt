@@ -1,0 +1,854 @@
+--- LOG START ---
+[2026-05-22T17:57:23.060Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T17:57:23.111Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T17:57:25.597Z] [LAYOUT] No session on startup 
+[2026-05-22T17:59:55.525Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T17:59:57.341Z] [LAYOUT] No session on startup 
+[2026-05-22T17:59:57.522Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T17:59:57.541Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T17:59:57.616Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:00:53.929Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:00:55.856Z] [LAYOUT] No session on startup 
+[2026-05-22T18:00:56.014Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:00:56.016Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:00:56.087Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:01:39.579Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:01:40.522Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:01:40.523Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:01:40.539Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:01:40.560Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:01:40.561Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:01:40.925Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:01:40.928Z] [LAYOUT] Profile not found during login. Creating default profile for: "94022a43-9147-4eb1-b3cf-3db108ae1291"
+[2026-05-22T18:01:41.170Z] [LAYOUT] Inserting default profile row into DB... {"id":"94022a43-9147-4eb1-b3cf-3db108ae1291","user_id":"94022a43-9147-4eb1-b3cf-3db108ae1291","full_name":"ffrfrfrf","role":"IT Support Specialist","points":0,"coins":0,"default_mode":"freelancer","availability":"available","profile_complete":25,"community_groups":["Hiring & Projects"],"country":"Nigeria"}
+[2026-05-22T18:01:41.401Z] [LAYOUT] DB insert profile failed {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:01:41.403Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:01:41.404Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:01:41.409Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:01:41.411Z] [LAYOUT] User has session, no profile, but isLoggingIn is true. Redirecting to /(tabs) (profile creation should be completed) 
+[2026-05-22T18:01:41.418Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:01:41.420Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T18:01:41.499Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:01:41.501Z] [LAYOUT] User has session, no profile, not logging in, and not in auth group. Redirecting to onboarding. 
+[2026-05-22T18:01:41.525Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:01:41.973Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:01:41.977Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:01:43.628Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:03:13.678Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:03:15.654Z] [LAYOUT] No session on startup 
+[2026-05-22T18:03:15.693Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:03:24.246Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:03:24.399Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:03:24.467Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:03:24.492Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:03:24.512Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:03:24.532Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:03:25.089Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:03:25.090Z] [LAYOUT] Profile not found during login. Creating default profile for: "94022a43-9147-4eb1-b3cf-3db108ae1291"
+[2026-05-22T18:03:25.303Z] [LAYOUT] Inserting default profile row into DB... {"id":"94022a43-9147-4eb1-b3cf-3db108ae1291","user_id":"94022a43-9147-4eb1-b3cf-3db108ae1291","full_name":"ffrfrfrf","role":"IT Support Specialist","points":0,"coins":0,"default_mode":"freelancer","availability":"available","profile_complete":25,"community_groups":["Hiring & Projects"],"country":"Nigeria"}
+[2026-05-22T18:03:25.498Z] [LAYOUT] DB insert profile failed {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:03:25.559Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:03:25.636Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:03:25.672Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:03:25.712Z] [LAYOUT] User has session, no profile, but isLoggingIn is true. Redirecting to /(tabs) (profile creation should be completed) 
+[2026-05-22T18:03:25.713Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:03:25.727Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T18:03:26.013Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:03:26.019Z] [LAYOUT] User has session, no profile, not logging in, and not in auth group. Redirecting to onboarding. 
+[2026-05-22T18:03:26.073Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:03:26.621Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:03:26.634Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:03:27.868Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:03:28.946Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:03:29.840Z] [LAYOUT] No session on startup 
+[2026-05-22T18:03:29.987Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:03:29.990Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:03:30.063Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:04:02.401Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:04:04.373Z] [LAYOUT] No session on startup 
+[2026-05-22T18:04:04.401Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:04:06.146Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:04:06.813Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:04:06.816Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:04:06.817Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:04:06.824Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:04:06.826Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:04:07.359Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:04:07.360Z] [LAYOUT] Profile not found during login. Creating default profile for: "94022a43-9147-4eb1-b3cf-3db108ae1291"
+[2026-05-22T18:04:07.700Z] [LAYOUT] Inserting default profile row into DB... {"id":"94022a43-9147-4eb1-b3cf-3db108ae1291","user_id":"94022a43-9147-4eb1-b3cf-3db108ae1291","full_name":"ffrfrfrf","role":"IT Support Specialist","points":0,"coins":0,"default_mode":"freelancer","availability":"available","profile_complete":25,"community_groups":["Hiring & Projects"],"country":"Nigeria"}
+[2026-05-22T18:04:07.861Z] [LAYOUT] DB insert profile failed {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:04:07.863Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:04:07.865Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:04:07.867Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:04:07.869Z] [LAYOUT] User has session, no profile, but isLoggingIn is true. Redirecting to /(tabs) (profile creation should be completed) 
+[2026-05-22T18:04:07.872Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:04:07.873Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T18:04:07.922Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:04:07.924Z] [LAYOUT] User has session, no profile, not logging in, and not in auth group. Redirecting to onboarding. 
+[2026-05-22T18:04:07.944Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:04:08.142Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:04:08.149Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:04:12.045Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:04:26.690Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:04:28.619Z] [LAYOUT] No session on startup 
+[2026-05-22T18:04:28.791Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:04:28.794Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:04:28.875Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:04:34.359Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:04:35.067Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:04:35.069Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:04:35.071Z] [LAYOUT] fetchProfile initiated {"userId":"6c0dec0f-b497-4351-93e7-35160dc579f0","isLoggingInFlag":true}
+[2026-05-22T18:04:35.097Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:04:35.100Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:04:35.454Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:04:35.456Z] [LAYOUT] Profile not found during login. Creating default profile for: "6c0dec0f-b497-4351-93e7-35160dc579f0"
+[2026-05-22T18:04:35.846Z] [LAYOUT] Inserting default profile row into DB... {"id":"6c0dec0f-b497-4351-93e7-35160dc579f0","user_id":"6c0dec0f-b497-4351-93e7-35160dc579f0","full_name":"testuser_1779472416371","role":"IT Support Specialist","points":0,"coins":0,"default_mode":"freelancer","availability":"available","profile_complete":25,"community_groups":["Hiring & Projects"],"country":"Nigeria"}
+[2026-05-22T18:04:36.148Z] [LAYOUT] DB insert profile failed {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:04:36.150Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:04:36.151Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:04:36.155Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:04:36.158Z] [LAYOUT] User has session, no profile, but isLoggingIn is true. Redirecting to /(tabs) (profile creation should be completed) 
+[2026-05-22T18:04:36.164Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:04:36.166Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T18:04:36.208Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:04:36.211Z] [LAYOUT] User has session, no profile, not logging in, and not in auth group. Redirecting to onboarding. 
+[2026-05-22T18:04:36.238Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:04:36.626Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:04:36.631Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:04:57.269Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:04:59.247Z] [LAYOUT] No session on startup 
+[2026-05-22T18:04:59.273Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:05:00.713Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:05:01.349Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:05:01.353Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:05:01.355Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:05:01.368Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:05:01.370Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:05:01.712Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:05:01.714Z] [LAYOUT] Profile not found during login. Creating default profile for: "94022a43-9147-4eb1-b3cf-3db108ae1291"
+[2026-05-22T18:05:01.893Z] [LAYOUT] Inserting default profile row into DB... {"id":"94022a43-9147-4eb1-b3cf-3db108ae1291","user_id":"94022a43-9147-4eb1-b3cf-3db108ae1291","full_name":"ffrfrfrf","role":"IT Support Specialist","points":0,"coins":0,"default_mode":"freelancer","availability":"available","profile_complete":25,"community_groups":["Hiring & Projects"],"country":"Nigeria"}
+[2026-05-22T18:05:02.067Z] [LAYOUT] DB insert profile failed {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:05:02.068Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:05:02.070Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:05:02.074Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:05:02.076Z] [LAYOUT] User has session, no profile, but isLoggingIn is true. Redirecting to /(tabs) (profile creation should be completed) 
+[2026-05-22T18:05:02.079Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:05:02.081Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T18:05:02.132Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:05:02.133Z] [LAYOUT] User has session, no profile, not logging in, and not in auth group. Redirecting to onboarding. 
+[2026-05-22T18:05:02.154Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:05:02.351Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:05:02.355Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:05:03.842Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:05:39.416Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:05:39.974Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:05:39.976Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:05:39.979Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:05:39.990Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:05:39.991Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:05:40.182Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:05:40.184Z] [LAYOUT] Profile not found during login. Creating default profile for: "94022a43-9147-4eb1-b3cf-3db108ae1291"
+[2026-05-22T18:05:40.374Z] [LAYOUT] Inserting default profile row into DB... {"id":"94022a43-9147-4eb1-b3cf-3db108ae1291","user_id":"94022a43-9147-4eb1-b3cf-3db108ae1291","full_name":"ffrfrfrf","role":"IT Support Specialist","points":0,"coins":0,"default_mode":"freelancer","availability":"available","profile_complete":25,"community_groups":["Hiring & Projects"],"country":"Nigeria"}
+[2026-05-22T18:05:40.564Z] [LAYOUT] DB insert profile failed {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:05:40.566Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not find the 'availability' column of 'profiles' in the schema cache"}
+[2026-05-22T18:05:40.567Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:05:40.570Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:05:40.572Z] [LAYOUT] User has session, no profile, but isLoggingIn is true. Redirecting to /(tabs) (profile creation should be completed) 
+[2026-05-22T18:05:40.574Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:05:40.575Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T18:05:40.612Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:05:40.613Z] [LAYOUT] User has session, no profile, not logging in, and not in auth group. Redirecting to onboarding. 
+[2026-05-22T18:05:40.631Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:05:40.871Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:05:40.875Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:05:58.956Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:06:05.110Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T18:06:06.532Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:06:09.435Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T18:06:11.095Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T18:06:13.527Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T18:06:14.949Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T18:06:16.456Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T18:06:21.807Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T18:06:29.342Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:06:29.345Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:06:29.347Z] [LAYOUT] fetchProfile initiated {"userId":"7228886d-f18c-408a-95db-5f49206ef780","isLoggingInFlag":false}
+[2026-05-22T18:06:29.350Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T18:06:29.352Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:06:29.372Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:06:29.373Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:06:30.105Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T18:06:30.107Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T18:06:30.108Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T18:06:30.110Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:06:30.112Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:06:32.741Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:06:32.743Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:06:32.774Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:12:44.402Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:12:44.431Z] [LAYOUT] fetchProfile initiated {"userId":"7228886d-f18c-408a-95db-5f49206ef780","isLoggingInFlag":false}
+[2026-05-22T18:12:44.446Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:12:44.448Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:12:44.449Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:12:45.115Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"7228886d-f18c-408a-95db-5f49206ef780"}
+[2026-05-22T18:12:45.117Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:12:45.147Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:20.687Z] [LAYOUT] fetchProfile initiated {"userId":"7228886d-f18c-408a-95db-5f49206ef780","isLoggingInFlag":false}
+[2026-05-22T18:17:20.696Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:20.698Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":true}
+[2026-05-22T18:17:20.699Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:17:20.702Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:20.703Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:17:20.873Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"7228886d-f18c-408a-95db-5f49206ef780"}
+[2026-05-22T18:17:20.875Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:17:20.966Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:23.442Z] [LAYOUT] Session restored on startup {"userId":"7228886d-f18c-408a-95db-5f49206ef780"}
+[2026-05-22T18:17:23.444Z] [LAYOUT] fetchProfile initiated {"userId":"7228886d-f18c-408a-95db-5f49206ef780","isLoggingInFlag":false}
+[2026-05-22T18:17:23.492Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:23.497Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:17:23.757Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"7228886d-f18c-408a-95db-5f49206ef780"}
+[2026-05-22T18:17:23.759Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:17:23.859Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:40.296Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T18:17:42.279Z] [LAYOUT] No session on startup 
+[2026-05-22T18:17:42.422Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:17:42.425Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:17:42.485Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:17:49.399Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:17:50.307Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:17:51.271Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:17:51.292Z] [LAYOUT] fetchProfile initiated {"userId":"6c0dec0f-b497-4351-93e7-35160dc579f0","isLoggingInFlag":true}
+[2026-05-22T18:17:51.403Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:17:52.310Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:17:52.311Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:17:52.471Z] [LAYOUT] Profile not found during login. Creating default profile for: "6c0dec0f-b497-4351-93e7-35160dc579f0"
+[2026-05-22T18:17:52.486Z] [LAYOUT] Inserting default profile row into DB... {"id":"6c0dec0f-b497-4351-93e7-35160dc579f0","user_id":"6c0dec0f-b497-4351-93e7-35160dc579f0","full_name":"testuser_1779472416371","role":"IT Support Specialist","points":0,"coins":0}
+[2026-05-22T18:17:53.673Z] [LAYOUT] Successfully inserted default profile row 
+[2026-05-22T18:17:53.674Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:17:53.675Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:17:53.677Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:17:53.882Z] [LAYOUT] Clearing isLoggingIn flag 
+[2026-05-22T18:17:53.920Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:17:53.921Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:17:53.922Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:18:09.319Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:18:09.396Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:18:09.403Z] [LAYOUT] fetchProfile initiated {"userId":"7228886d-f18c-408a-95db-5f49206ef780","isLoggingInFlag":false}
+[2026-05-22T18:18:09.405Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:18:09.446Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:18:09.653Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"7228886d-f18c-408a-95db-5f49206ef780"}
+[2026-05-22T18:18:09.663Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:18:09.704Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:18:14.328Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:18:14.351Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:18:14.353Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:18:14.405Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:18:15.805Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:18:16.061Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:18:16.063Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:18:16.065Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:18:16.076Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:18:16.078Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:18:16.292Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T18:18:16.295Z] [LAYOUT] Profile not found during login. Creating default profile for: "94022a43-9147-4eb1-b3cf-3db108ae1291"
+[2026-05-22T18:18:16.472Z] [LAYOUT] Inserting default profile row into DB... {"id":"94022a43-9147-4eb1-b3cf-3db108ae1291","user_id":"94022a43-9147-4eb1-b3cf-3db108ae1291","full_name":"ffrfrfrf","role":"IT Support Specialist","points":0,"coins":0}
+[2026-05-22T18:18:16.702Z] [LAYOUT] Successfully inserted default profile row 
+[2026-05-22T18:18:16.704Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:18:16.710Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:18:16.712Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:18:16.714Z] [LAYOUT] Clearing isLoggingIn flag 
+[2026-05-22T18:18:16.720Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:18:16.721Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:18:16.768Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:18:22.256Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:18:22.281Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:18:22.282Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:18:22.300Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:18:24.370Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T18:18:28.681Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:18:31.729Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T18:18:33.062Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T18:18:36.424Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T18:18:38.575Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T18:18:45.978Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T18:18:53.499Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T18:19:11.581Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:19:11.586Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:19:11.588Z] [LAYOUT] fetchProfile initiated {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5","isLoggingInFlag":false}
+[2026-05-22T18:19:11.592Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T18:19:11.594Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:19:11.614Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:19:11.616Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:19:12.328Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T18:19:12.330Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T18:19:12.331Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T18:19:12.333Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:19:12.336Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:19:15.640Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:19:15.642Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:19:15.689Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:19:32.262Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","jobs"]}
+[2026-05-22T18:19:33.777Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","learn"]}
+[2026-05-22T18:19:35.386Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["wallet"]}
+[2026-05-22T18:19:37.738Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","community"]}
+[2026-05-22T18:19:42.731Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:21:22.460Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:21:22.467Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:21:22.469Z] [LAYOUT] fetchProfile initiated {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5","isLoggingInFlag":false}
+[2026-05-22T18:21:22.470Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:21:22.473Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:21:23.013Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5"}
+[2026-05-22T18:21:23.014Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:21:23.121Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:24:32.688Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:24:32.744Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:24:32.747Z] [LAYOUT] fetchProfile initiated {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5","isLoggingInFlag":false}
+[2026-05-22T18:24:32.749Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:24:32.750Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:24:33.416Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5"}
+[2026-05-22T18:24:33.418Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:24:33.545Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:24:36.143Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:24:36.439Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:24:36.440Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:24:37.288Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:29:13.374Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T18:29:16.111Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:29:37.144Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:29:39.590Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:29:39.811Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:29:39.944Z] [LAYOUT] fetchProfile initiated {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5","isLoggingInFlag":true}
+[2026-05-22T18:29:40.359Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:29:40.363Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:29:40.888Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5"}
+[2026-05-22T18:29:40.891Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:29:41.127Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:29:41.129Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:29:41.136Z] [LAYOUT] Clearing isLoggingIn flag 
+[2026-05-22T18:29:41.150Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:29:41.169Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:29:41.299Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:29:52.847Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","messages"]}
+[2026-05-22T18:29:54.907Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["messages","new"]}
+[2026-05-22T18:30:13.280Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","messages"]}
+[2026-05-22T18:34:11.901Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:34:11.924Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:34:11.926Z] [LAYOUT] fetchProfile initiated {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5","isLoggingInFlag":false}
+[2026-05-22T18:34:11.929Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","messages"]}
+[2026-05-22T18:34:11.931Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:34:12.655Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"6e192f08-77dc-4dc2-a489-7991150edfc5"}
+[2026-05-22T18:34:12.659Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:34:12.973Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)","messages"]}
+[2026-05-22T18:34:15.137Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:34:15.230Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)","messages"]}
+[2026-05-22T18:34:15.232Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:34:15.293Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:34:17.797Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T18:34:19.611Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T18:34:23.016Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T18:34:24.724Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T18:34:29.859Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T18:34:35.962Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T18:34:38.891Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T18:34:45.357Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T18:34:56.633Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:34:56.635Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":false}
+[2026-05-22T18:34:56.636Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:34:56.646Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T18:34:56.648Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:34:56.682Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:34:56.685Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:34:57.283Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T18:34:57.285Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T18:34:57.296Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T18:34:57.298Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:34:57.299Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:35:02.228Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T18:35:02.229Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:35:02.279Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:33.865Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:35:33.867Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:35:33.868Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":false}
+[2026-05-22T18:35:33.870Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:33.873Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:35:34.229Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T18:35:34.232Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:35:34.341Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:37.553Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":true}
+[2026-05-22T18:35:37.556Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:35:37.559Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":false}
+[2026-05-22T18:35:37.763Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T18:35:37.765Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:35:39.545Z] [LAYOUT] Session restored on startup {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T18:35:39.547Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":false}
+[2026-05-22T18:35:39.733Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T18:35:39.734Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:35:39.827Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:43.805Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:35:43.838Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:43.839Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:35:43.886Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:35:46.148Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:35:46.486Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:35:46.488Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:35:46.489Z] [LAYOUT] fetchProfile initiated {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291","isLoggingInFlag":true}
+[2026-05-22T18:35:46.501Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:35:46.503Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:35:46.898Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"94022a43-9147-4eb1-b3cf-3db108ae1291"}
+[2026-05-22T18:35:46.900Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:35:46.904Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:35:46.907Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:35:46.909Z] [LAYOUT] Clearing isLoggingIn flag 
+[2026-05-22T18:35:46.913Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:35:46.914Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:35:46.965Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:52.654Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T18:35:52.711Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:35:52.712Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T18:35:52.802Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:35:59.892Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:36:00.163Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:36:00.170Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T18:36:00.172Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":true}
+[2026-05-22T18:36:00.175Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:36:00.176Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:36:00.348Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T18:36:00.350Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:36:00.355Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T18:36:00.356Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:36:00.358Z] [LAYOUT] Clearing isLoggingIn flag 
+[2026-05-22T18:36:00.363Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T18:36:00.364Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T18:36:00.420Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:41:49.087Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T18:41:49.107Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":false}
+[2026-05-22T18:41:49.117Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T18:41:49.122Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T18:41:49.128Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T18:41:50.041Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T18:41:50.045Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T18:41:50.096Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T19:10:55.205Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:10:55.225Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:10:55.228Z] [LAYOUT] fetchProfile initiated {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e","isLoggingInFlag":false}
+[2026-05-22T19:10:55.353Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T19:10:55.355Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:10:56.143Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"ac10b4a1-3aa4-47fb-973e-d7ebe005032e"}
+[2026-05-22T19:10:56.145Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:10:56.239Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T19:11:00.433Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T19:11:00.459Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T19:11:00.461Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T19:11:00.540Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T19:11:28.925Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T19:11:31.888Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:11:35.732Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:11:37.640Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:11:40.195Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:11:41.949Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:11:43.757Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:11:48.232Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:13:43.070Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:13:43.075Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:13:43.077Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:13:43.078Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:13:43.079Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:13:43.081Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:13:43.082Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:13:43.752Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:13:43.753Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:13:43.760Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:13:43.772Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:13:43.773Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:14:09.963Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:14:09.974Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:14:09.978Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:14:09.980Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:14:09.984Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:14:10.429Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:14:10.430Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:14:10.431Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:14:10.432Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:14:10.435Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:14:11.716Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:14:11.718Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:14:11.719Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:14:11.723Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:14:11.725Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:14:11.933Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:14:11.936Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:14:11.937Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:14:11.939Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:14:11.941Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:14:24.449Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:14:24.452Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:14:24.455Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:14:24.459Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:14:24.477Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:14:24.646Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:14:24.647Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:14:24.648Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:14:24.658Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:14:24.661Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:15:00.979Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:15:00.983Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:15:00.986Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:15:00.989Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:15:00.991Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:15:01.533Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:15:01.534Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:15:01.535Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:15:01.536Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:15:01.539Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:16:05.781Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:16:05.784Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:16:05.787Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:16:05.793Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:16:05.795Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:16:06.371Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:16:06.374Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:16:06.376Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:16:06.378Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:16:06.380Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:16:07.038Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:16:48.868Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:16:48.875Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:16:48.878Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:16:48.882Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:16:48.887Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:16:49.314Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:16:49.315Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:16:49.317Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:16:49.318Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:16:49.319Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:18:22.715Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:18:22.719Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:18:22.721Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:18:22.725Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:18:22.727Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:18:23.064Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:18:23.065Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:18:23.067Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:18:23.068Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:18:23.071Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:19:00.088Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:19:00.092Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:19:00.093Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:19:00.105Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:19:00.107Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:19:00.513Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:19:00.514Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:19:00.516Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:19:00.518Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:19:00.519Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:19:03.414Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":true}
+[2026-05-22T19:19:03.417Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:19:03.419Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:19:03.620Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:19:03.621Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:19:03.623Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:19:03.624Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:19:05.383Z] [LAYOUT] Session restored on startup {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7"}
+[2026-05-22T19:19:05.384Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:19:05.588Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:19:05.589Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:19:05.590Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:19:05.592Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:19:05.653Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:24:55.272Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:24:55.281Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:24:55.287Z] [LAYOUT] fetchProfile initiated {"userId":"283cfaa2-c30a-47f8-aa91-2ea4059055d7","isLoggingInFlag":false}
+[2026-05-22T19:24:55.288Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:24:55.289Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:24:56.189Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:24:56.192Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:24:56.194Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:24:56.195Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:24:56.197Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:25:17.865Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:25:17.869Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:25:17.870Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T19:25:17.881Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:25:17.883Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:25:17.934Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:25:17.938Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:25:18.483Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:25:18.484Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:25:18.485Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:25:18.486Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:25:18.489Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:28:03.797Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:28:03.804Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:28:03.808Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:28:03.809Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:28:03.813Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T19:28:04.703Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:28:04.704Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:28:04.706Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:28:04.707Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:28:04.708Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:28:08.721Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:28:08.722Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:28:08.724Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T19:28:08.729Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:28:08.732Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:28:08.945Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:28:08.946Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:28:08.948Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:28:08.949Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:28:08.951Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:29:35.802Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:29:35.816Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:29:35.844Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:29:35.845Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T19:29:35.846Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:29:36.148Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:29:36.150Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:29:36.169Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:29:36.178Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:29:36.181Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:32:33.207Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T19:32:33.245Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T19:32:33.247Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T19:32:33.252Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:32:33.256Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T19:32:34.454Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":false}
+[2026-05-22T19:32:34.458Z] [LAYOUT] Not logging in attempt, passing profile error upstream 
+[2026-05-22T19:32:34.461Z] [LAYOUT] Error fetching or creating profile: {"error":"Could not load your profile. Please try again."}
+[2026-05-22T19:32:34.463Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T19:32:34.479Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","country"]}
+[2026-05-22T19:32:51.557Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:33:04.591Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T19:33:04.594Z] [LAYOUT] User has session, no profile, not logging in, and on explicit auth landing page. Signing out. 
+[2026-05-22T19:33:05.217Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_OUT","hasSession":false}
+[2026-05-22T19:33:05.222Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T19:33:07.190Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T19:33:12.221Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:33:14.411Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:33:16.010Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:33:19.081Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:33:20.986Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:33:22.322Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:33:24.218Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:33:26.318Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:33:32.249Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:33:34.476Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:33:35.758Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:33:37.367Z] [LAYOUT] No session on startup 
+[2026-05-22T19:33:37.378Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:33:38.887Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:33:41.110Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:33:43.099Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:33:51.928Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:34:18.164Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:34:20.167Z] [LAYOUT] No session on startup 
+[2026-05-22T19:34:20.181Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:34:24.148Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:34:26.147Z] [LAYOUT] No session on startup 
+[2026-05-22T19:34:26.157Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:34:26.977Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:34:28.475Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:34:28.980Z] [LAYOUT] No session on startup 
+[2026-05-22T19:34:30.481Z] [LAYOUT] No session on startup 
+[2026-05-22T19:34:30.489Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:34:31.439Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:34:32.758Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:34:33.447Z] [LAYOUT] No session on startup 
+[2026-05-22T19:34:34.758Z] [LAYOUT] No session on startup 
+[2026-05-22T19:34:34.772Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T19:34:40.170Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:35:39.905Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T19:35:43.036Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T19:35:47.129Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:35:51.677Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:35:54.035Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:35:54.759Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:35:59.364Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:36:00.545Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:40:37.708Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:40:38.017Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:40:39.785Z] [LAYOUT] No session on startup 
+[2026-05-22T19:40:39.801Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:41:22.534Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:41:24.501Z] [LAYOUT] No session on startup 
+[2026-05-22T19:41:24.711Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","signup"]}
+[2026-05-22T19:41:24.791Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:41:26.676Z] [LAYOUT] No session on startup 
+[2026-05-22T19:41:26.956Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T19:41:29.638Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T19:42:54.803Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","welcome-intro"]}
+[2026-05-22T19:42:56.686Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:42:59.715Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","client","pitch"]}
+[2026-05-22T19:43:02.314Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","client","needs"]}
+[2026-05-22T19:43:05.335Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","client","hiring-as"]}
+[2026-05-22T19:43:10.630Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","client","needs"]}
+[2026-05-22T19:43:12.096Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","client","pitch"]}
+[2026-05-22T19:43:13.630Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:43:15.599Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:43:17.158Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:43:20.358Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:43:24.826Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:43:30.220Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:43:35.377Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:43:38.087Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:43:38.662Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:43:39.807Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:44:04.331Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:45:38.476Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:45:38.483Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:45:41.444Z] [LAYOUT] No session on startup 
+[2026-05-22T19:46:28.605Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:46:30.585Z] [LAYOUT] No session on startup 
+[2026-05-22T19:46:30.624Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:46:34.732Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:46:39.793Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","credentials"]}
+[2026-05-22T19:46:45.228Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:46:46.002Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:46:47.011Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:46:48.471Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:46:50.585Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:46:53.529Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:46:57.686Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:57:49.067Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:57:51.044Z] [LAYOUT] No session on startup 
+[2026-05-22T19:57:51.075Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:57:55.252Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:57:57.167Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:57:59.996Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:58:00.642Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:58:02.138Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:58:03.169Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:04.061Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:58:09.336Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:19.427Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:58:20.991Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:21.706Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:58:25.330Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:32.086Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:58:34.743Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:35.324Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T19:58:35.929Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:36.731Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:58:37.157Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T19:58:37.339Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T19:58:37.534Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:58:37.714Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:58:37.899Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T19:58:38.094Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T19:58:38.284Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T19:58:38.482Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:38.701Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:38.949Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:39.253Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:39.462Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:39.678Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:39.940Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:40.391Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:40.480Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:40.570Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:40.698Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:40.741Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:40.931Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:40.941Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:41.097Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:41.261Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:41.275Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:41.446Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T19:58:41.458Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:41.679Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:41.942Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:42.396Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:42.565Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:42.736Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:42.926Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:43.096Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:43.268Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:44.439Z] [LAYOUT] No session on startup 
+[2026-05-22T19:58:44.452Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","name"]}
+[2026-05-22T20:05:05.017Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","goal"]}
+[2026-05-22T20:05:05.129Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","experience"]}
+[2026-05-22T20:05:05.339Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T20:05:05.506Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T20:05:05.717Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","role-select"]}
+[2026-05-22T20:05:08.499Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","welcome"]}
+[2026-05-22T20:05:09.112Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","onboarding","freelancer","career-path"]}
+[2026-05-22T20:05:14.940Z] [LAYOUT] onAuthStateChange fired {"event":"INITIAL_SESSION","hasSession":false}
+[2026-05-22T20:05:16.930Z] [LAYOUT] No session on startup 
+[2026-05-22T20:05:16.985Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:05:16.996Z] [LAYOUT] No session and not in auth group. Redirecting to /login 
+[2026-05-22T20:05:17.021Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T20:05:18.689Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":false,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T20:05:20.094Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T20:05:20.096Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":true}
+[2026-05-22T20:05:20.100Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":true}
+[2026-05-22T20:05:20.101Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":false,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T20:05:20.103Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T20:05:20.663Z] [LAYOUT] getProfile failed, checking if we should create default profile {"error":"Could not load your profile. Please try again.","isLoggingInFlag":true}
+[2026-05-22T20:05:20.665Z] [LAYOUT] Profile not found during login. Creating default profile for: "e908d9bd-a833-428e-a0ef-044e25de2413"
+[2026-05-22T20:05:21.049Z] [LAYOUT] Inserting default profile row into DB... {"id":"e908d9bd-a833-428e-a0ef-044e25de2413","user_id":"e908d9bd-a833-428e-a0ef-044e25de2413","full_name":"postmgan","role":"IT Support Specialist","points":0,"coins":0}
+[2026-05-22T20:05:21.394Z] [LAYOUT] Successfully inserted default profile row 
+[2026-05-22T20:05:21.397Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T20:05:21.402Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":true,"segments":["(auth)","login"]}
+[2026-05-22T20:05:21.403Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T20:05:21.405Z] [LAYOUT] Clearing isLoggingIn flag 
+[2026-05-22T20:05:21.409Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(auth)","login"]}
+[2026-05-22T20:05:21.410Z] [LAYOUT] User has session and profile. Redirecting from auth group to /(tabs) 
+[2026-05-22T20:05:21.445Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:11:09.314Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T20:11:09.321Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T20:11:09.322Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T20:11:09.323Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:11:09.325Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T20:11:10.594Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-22T20:11:10.595Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T20:11:10.621Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:15:27.400Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T20:15:27.405Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T20:15:27.408Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T20:15:27.411Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:15:27.413Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T20:15:28.426Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-22T20:15:28.432Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T20:15:28.451Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:19:42.716Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T20:19:42.732Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T20:19:42.735Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T20:19:42.736Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:19:42.742Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T20:19:43.141Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-22T20:19:43.142Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T20:19:43.163Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:43:03.383Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-22T20:43:03.402Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-22T20:43:03.410Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-22T20:43:03.451Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-22T20:43:03.452Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-22T20:43:04.684Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-22T20:43:04.688Z] [LAYOUT] fetchProfile finished 
+[2026-05-22T20:43:04.757Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T12:06:47.879Z] [LAYOUT] onAuthStateChange fired {"event":"TOKEN_REFRESHED","hasSession":true}
+[2026-05-23T12:06:47.912Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-23T12:06:47.914Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-23T12:06:47.916Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T12:06:47.920Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-23T12:06:48.866Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-23T12:06:48.871Z] [LAYOUT] fetchProfile finished 
+[2026-05-23T12:06:48.951Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T12:07:09.856Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["ai-assistant"]}
+[2026-05-23T12:07:12.078Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T12:28:20.933Z] [LAYOUT] onAuthStateChange fired {"event":"SIGNED_IN","hasSession":true}
+[2026-05-23T12:28:20.980Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-23T12:28:20.983Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-23T12:28:21.041Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T12:28:21.043Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-23T12:28:21.932Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-23T12:28:21.936Z] [LAYOUT] fetchProfile finished 
+[2026-05-23T12:28:21.990Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T13:04:51.659Z] [LAYOUT] onAuthStateChange has session. Captured loggingIn state: {"loggingIn":false}
+[2026-05-23T13:04:51.684Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":true,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}
+[2026-05-23T13:04:51.685Z] [LAYOUT] onAuthStateChange fired {"event":"TOKEN_REFRESHED","hasSession":true}
+[2026-05-23T13:04:51.686Z] [LAYOUT] fetchProfile initiated {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413","isLoggingInFlag":false}
+[2026-05-23T13:04:51.687Z] [LAYOUT] Routing blocked because isFetchingProfile is true 
+[2026-05-23T13:04:52.264Z] [LAYOUT] Successfully fetched existing profile from DB {"userId":"e908d9bd-a833-428e-a0ef-044e25de2413"}
+[2026-05-23T13:04:52.271Z] [LAYOUT] fetchProfile finished 
+[2026-05-23T13:04:52.301Z] [LAYOUT] Routing useEffect triggered {"isFetchingProfile":false,"hasSession":true,"hasProfile":true,"isLoggingIn":false,"segments":["(tabs)"]}

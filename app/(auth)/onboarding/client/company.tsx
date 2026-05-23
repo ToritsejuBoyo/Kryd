@@ -1,0 +1,106 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, SafeAreaView, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useTheme } from '@/lib/useTheme';
+import { OnboardingProgress } from '@/components/OnboardingProgress';
+import Animated, { SlideInRight, SlideOutLeft } from 'react-native-reanimated';
+import { useOnboardingStore } from '@/store/onboardingStore';
+
+export default function CompanyScreen() {
+  const router = useRouter();
+  const { colors } = useTheme();
+  const { companyName, setCompanyName, hiringAs, fullName } = useOnboardingStore();
+  
+  const [name, setName] = useState(companyName);
+
+  useEffect(() => {
+    if (hiringAs === 'personal' && fullName && !name) {
+      setName(fullName);
+    }
+  }, [hiringAs, fullName]);
+
+  const handleContinue = () => {
+    setCompanyName(name.trim());
+    router.push('/(auth)/onboarding/client/credentials');
+  };
+
+  const isNextEnabled = name.trim().length >= 2;
+  const isPersonal = hiringAs === 'personal';
+
+  return (
+    <SafeAreaView className="flex-1" style={{ backgroundColor: colors.backgroundPrimary }}>
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} className="flex-1">
+        <View 
+          style={{ 
+            height: (Platform.OS === 'web' ? '100vh' : '100%') as any,
+            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            padding: Platform.OS === 'web' ? 32 : 16
+          }}
+        >
+          {/* Fixed Header */}
+          <View className="w-full max-w-xl mx-auto">
+            <OnboardingProgress currentStep={4} totalSteps={6} onBack={() => router.push('/(auth)/onboarding/client/hiring-as')} />
+            
+            <View className="mb-4">
+              <Text className="font-inter-bold text-2xl md:text-3xl mb-1.5" style={{ color: colors.textPrimary }}>
+                What is your {isPersonal ? 'project' : 'company'} called?
+              </Text>
+              <Text className="font-inter text-xs md:text-sm" style={{ color: colors.textSecondary }}>
+                {isPersonal 
+                  ? "You can use your own name if this is a personal project."
+                  : "This appears on your job listings so freelancers know who they are applying to."}
+              </Text>
+            </View>
+          </View>
+
+          {/* Fixed Content Area */}
+          <View className="flex-1 justify-center w-full max-w-xl mx-auto px-2">
+            <Animated.View entering={SlideInRight} exiting={SlideOutLeft} className="w-full">
+              <View className="mb-4">
+                <Text className="font-inter-medium text-xs md:text-sm mb-2" style={{ color: colors.textPrimary }}>
+                  {isPersonal ? 'Project Name' : 'Company Name'}
+                </Text>
+                <TextInput
+                  className="w-full px-4 py-3 rounded-xl font-inter-bold text-lg md:text-xl border"
+                  style={{ 
+                    backgroundColor: colors.cardSurface, 
+                    borderColor: colors.border,
+                    color: colors.textPrimary 
+                  }}
+                  placeholder="e.g. TechCorp Nigeria, My Home Office Project"
+                  placeholderTextColor={colors.textSecondary}
+                  value={name}
+                  onChangeText={setName}
+                  autoCapitalize="words"
+                  autoFocus
+                />
+              </View>
+            </Animated.View>
+          </View>
+
+          {/* Fixed Footer */}
+          <View className="items-center py-2 w-full max-w-md mx-auto px-4">
+            <TouchableOpacity
+              className="w-full py-3.5 rounded-full items-center mb-4"
+              style={{ 
+                backgroundColor: isNextEnabled ? colors.accent : colors.border,
+                opacity: isNextEnabled ? 1 : 0.5 
+              }}
+              disabled={!isNextEnabled}
+              onPress={handleContinue}
+            >
+              <Text className="font-inter-bold text-sm tracking-wider uppercase" style={{ color: isNextEnabled ? colors.accentText : colors.textSecondary }}>
+                Next →
+              </Text>
+            </TouchableOpacity>
+
+          </View>
+        </View>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
+  );
+}
+

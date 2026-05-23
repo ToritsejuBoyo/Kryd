@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .kryd-card-shadow {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.04);
+  }
+}
