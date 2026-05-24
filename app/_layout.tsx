@@ -169,7 +169,6 @@ export default function RootLayout() {
           remoteLog('Profile not found during login. Creating default profile for:', userId);
           const { data: { user } } = await supabase.auth.getUser();
           const defaultProfile = {
-            id: userId,
             user_id: userId,
             full_name: user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User',
             role: 'IT Support Specialist',
