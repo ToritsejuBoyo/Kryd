@@ -8,6 +8,7 @@ import { useUserStore } from '@/store/userStore';
 import { getUnreadNotificationCount } from '@/lib/db';
 import { supabase } from '@/lib/supabase';
 import { useTheme } from '@/lib/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export function GlobalHeader() {
   const router = useRouter();
@@ -68,17 +69,9 @@ export function GlobalHeader() {
             <BrandLogo />
             
             {/* Theme Toggle */}
-            <TouchableOpacity 
-              onPress={() => setTheme(mode === 'light' ? 'dark' : 'light')}
-              className="hidden md:flex ml-2 p-2 rounded-full border items-center justify-center flex-row space-x-2"
-              style={{ borderColor: colors.border, backgroundColor: colors.backgroundSecondary }}
-            >
-              <FontAwesome5 
-                name={mode === 'light' ? 'moon' : 'sun'} 
-                size={14} 
-                color={colors.textPrimary} 
-              />
-            </TouchableOpacity>
+            <View className="hidden md:flex ml-2">
+              <ThemeToggle />
+            </View>
 
             {/* Upwork style nav links (hidden on mobile) */}
             <View className="hidden md:flex flex-row items-center gap-x-6 ml-4">
