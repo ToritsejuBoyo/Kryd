@@ -5,8 +5,8 @@ if (Platform.OS !== 'web') {
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL as string || ''
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY as string || ''
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL as string || 'https://placeholder.supabase.co'
+const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY as string || 'placeholder-key'
 
 console.log('--- SUPABASE CONFIG TEST ---')
 console.log('URL:', supabaseUrl)
