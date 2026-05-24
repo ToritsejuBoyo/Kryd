@@ -67,11 +67,6 @@ export function GlobalHeader() {
         <View className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex-row justify-between items-center w-full">
           <View className="flex-row items-center gap-x-6">
             <BrandLogo />
-            
-            {/* Theme Toggle */}
-            <View className="hidden md:flex ml-2">
-              <ThemeToggle />
-            </View>
 
             {/* Upwork style nav links (hidden on mobile) */}
             <View className="hidden md:flex flex-row items-center gap-x-6 ml-4">
@@ -95,24 +90,9 @@ export function GlobalHeader() {
           
           <View className="flex-row items-center gap-x-4">
             
-            {/* Mode Toggle Pill */}
-            <View className="hidden md:flex flex-row bg-black/5 rounded-full p-1 border" style={{ borderColor: colors.border, backgroundColor: mode === 'light' ? 'rgba(0,0,0,0.03)' : 'rgba(255,255,255,0.05)' }}>
-              <TouchableOpacity 
-                className={`px-3 py-1.5 rounded-full flex-row items-center ${!isClientMode ? 'shadow-sm' : ''}`}
-                style={{ backgroundColor: !isClientMode ? colors.accent : 'transparent' }}
-                onPress={() => setClientMode(false)}
-              >
-                <Text className="mr-1">💻</Text>
-                <Text className="font-inter-medium text-xs" style={{ color: !isClientMode ? colors.accentText : colors.textSecondary }}>Freelancer</Text>
-              </TouchableOpacity>
-              <TouchableOpacity 
-                className={`px-3 py-1.5 rounded-full flex-row items-center ${isClientMode ? 'shadow-sm' : ''}`}
-                style={{ backgroundColor: isClientMode ? colors.accent : 'transparent' }}
-                onPress={() => setClientMode(true)}
-              >
-                <Text className="mr-1">🏢</Text>
-                <Text className="font-inter-medium text-xs" style={{ color: isClientMode ? colors.accentText : colors.textSecondary }}>Client</Text>
-              </TouchableOpacity>
+            {/* Theme Toggle */}
+            <View className="hidden md:flex mr-2">
+              <ThemeToggle />
             </View>
             
             <TouchableOpacity onPress={() => router.push('/(tabs)/messages' as any)} className="relative p-2">
