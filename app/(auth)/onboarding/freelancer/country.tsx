@@ -33,7 +33,6 @@ export default function CountryScreen() {
       if (!user) throw new Error("Could not find user session");
 
       const profileData = {
-        id: user.id,
         user_id: user.id,
         full_name: fullName || user.user_metadata?.full_name || '',
         role: role === 'client' ? 'Employer' : 'IT Support Specialist',
