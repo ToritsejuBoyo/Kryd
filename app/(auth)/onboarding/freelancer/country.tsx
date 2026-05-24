@@ -37,6 +37,7 @@ export default function CountryScreen() {
         full_name: fullName || user.user_metadata?.full_name || '',
         role: role === 'client' ? 'Employer' : 'IT Support Specialist',
         default_mode: role,
+        preferred_currency: selectedCurrency,
         points: 0,
         coins: 0
       };
