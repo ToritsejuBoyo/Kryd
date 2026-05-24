@@ -69,7 +69,7 @@ export default function CredentialsScreen() {
         return;
       }
 
-      router.push('/(auth)/onboarding/freelancer/currency');
+      router.push('/(auth)/onboarding/freelancer/country');
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred.');
     } finally {

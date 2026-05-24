@@ -10,20 +10,20 @@ import { supabase } from '@/lib/supabase';
 import { useUserStore } from '@/store/userStore';
 import Toast from 'react-native-toast-message';
 
-export default function CurrencyScreen() {
+export default function CountryScreen() {
   const router = useRouter();
   const { colors } = useTheme();
-
-  const {
+  
+  const { 
     preferredCurrency, setPreferredCurrency,
     fullName, resetOnboarding, role
   } = useOnboardingStore();
-
+  
   const { setProfile, setClientMode } = useUserStore();
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [selectedCurrency, setSelectedCurrency] = useState<string>(preferredCurrency || 'NGN_USD');
+  const [selectedCurrency, setSelectedCurrency] = useState<string>('USD');
 
   const handleFinish = async () => {
     setLoading(true);
@@ -32,12 +32,12 @@ export default function CurrencyScreen() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) throw new Error("Could not find user session");
 
-      const profileData = {
+      const profileData: Record<string, any> = {
         user_id: user.id,
         full_name: fullName || user.user_metadata?.full_name || '',
         role: role === 'client' ? 'Employer' : 'IT Support Specialist',
         default_mode: role,
-        preferred_currency: selectedCurrency,
+        preferred_currency: selectedCurrency || 'USD',
         points: 0,
         coins: 0
       };
@@ -51,11 +51,11 @@ export default function CurrencyScreen() {
       if (error) throw error;
 
       setClientMode(false);
-      setPreferredCurrency(selectedCurrency as 'NGN_USD' | 'USD');
       setSuccess(true);
-
+      
       // Delay navigation for celebration animation
       setTimeout(() => {
+        setPreferredCurrency(selectedCurrency as any);
         setProfile(data);
         resetOnboarding();
         router.replace('/(tabs)');
@@ -82,16 +82,10 @@ export default function CurrencyScreen() {
     );
   }
 
-  const currencies = [
-    { key: 'NGN_USD', label: 'Naira (₦) + Dollars ($)' },
-    { key: 'USD',     label: 'Dollars ($) only' },
-    { key: 'GBP',     label: 'Pounds (£) only' },
-  ];
-
   return (
     <SafeAreaView className="flex-1" style={{ backgroundColor: colors.backgroundPrimary }}>
-      <View
-        style={{
+      <View 
+        style={{ 
           height: (Platform.OS === 'web' ? '100vh' : '100%') as any,
           overflow: 'hidden',
           display: 'flex',
@@ -103,7 +97,7 @@ export default function CurrencyScreen() {
         {/* Fixed Header */}
         <View className="w-full max-w-xl mx-auto">
           <OnboardingProgress currentStep={7} totalSteps={7} onBack={() => router.push('/(auth)/onboarding/freelancer/credentials')} />
-
+          
           <View className="mb-4">
             <Text className="font-inter-bold text-2xl md:text-3xl mb-1.5" style={{ color: colors.textPrimary }}>
               Choose your currency
@@ -117,32 +111,53 @@ export default function CurrencyScreen() {
         {/* Scrollable Content Area */}
         <View className="flex-1 w-full max-w-xl mx-auto overflow-hidden px-2 py-2">
           <Animated.View entering={SlideInRight} exiting={SlideOutLeft} className="flex-1">
-            <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
+            <ScrollView 
+              className="flex-1" 
+              showsVerticalScrollIndicator={false}
+            >
               <View className="mb-4">
                 <View className="flex-col gap-3">
-                  {currencies.map(({ key, label }) => (
-                    <TouchableOpacity
-                      key={key}
-                      onPress={() => setSelectedCurrency(key)}
-                      className="p-4 rounded-xl border flex-row items-center"
-                      style={{
-                        backgroundColor: selectedCurrency === key ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface,
-                        borderColor: selectedCurrency === key ? '#CCDF1A' : colors.border
-                      }}
-                    >
-                      <View
-                        className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3"
-                        style={{ borderColor: selectedCurrency === key ? '#CCDF1A' : colors.border }}
-                      >
-                        {selectedCurrency === key && (
-                          <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />
-                        )}
-                      </View>
-                      <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>
-                        {label}
-                      </Text>
-                    </TouchableOpacity>
-                  ))}
+                  <TouchableOpacity
+                    onPress={() => setSelectedCurrency('USD')}
+                    className="p-4 rounded-xl border flex-row items-center"
+                    style={{ 
+                      backgroundColor: selectedCurrency === 'USD' ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface, 
+                      borderColor: selectedCurrency === 'USD' ? '#CCDF1A' : colors.border 
+                    }}
+                  >
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: selectedCurrency === 'USD' ? '#CCDF1A' : colors.border }}>
+                      {selectedCurrency === 'USD' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />}
+                    </View>
+                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Dollar (USD)</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    onPress={() => setSelectedCurrency('NGN')}
+                    className="p-4 rounded-xl border flex-row items-center"
+                    style={{ 
+                      backgroundColor: selectedCurrency === 'NGN' ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface, 
+                      borderColor: selectedCurrency === 'NGN' ? '#CCDF1A' : colors.border 
+                    }}
+                  >
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: selectedCurrency === 'NGN' ? '#CCDF1A' : colors.border }}>
+                      {selectedCurrency === 'NGN' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />}
+                    </View>
+                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Naira (NGN)</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    onPress={() => setSelectedCurrency('GBP')}
+                    className="p-4 rounded-xl border flex-row items-center"
+                    style={{ 
+                      backgroundColor: selectedCurrency === 'GBP' ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface, 
+                      borderColor: selectedCurrency === 'GBP' ? '#CCDF1A' : colors.border 
+                    }}
+                  >
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: selectedCurrency === 'GBP' ? '#CCDF1A' : colors.border }}>
+                      {selectedCurrency === 'GBP' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />}
+                    </View>
+                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Pounds (GBP)</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
             </ScrollView>
@@ -153,9 +168,9 @@ export default function CurrencyScreen() {
         <View className="items-center py-2 w-full max-w-md mx-auto px-4">
           <TouchableOpacity
             className="w-full py-3.5 rounded-full items-center mb-4"
-            style={{
+            style={{ 
               backgroundColor: colors.accent,
-              opacity: loading ? 0.7 : 1
+              opacity: loading ? 0.7 : 1 
             }}
             disabled={loading}
             onPress={handleFinish}
@@ -173,3 +188,4 @@ export default function CurrencyScreen() {
     </SafeAreaView>
   );
 }
+

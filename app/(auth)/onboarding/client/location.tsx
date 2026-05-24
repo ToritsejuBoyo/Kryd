@@ -13,19 +13,16 @@ import Toast from 'react-native-toast-message';
 export default function ClientLocationScreen() {
   const router = useRouter();
   const { colors } = useTheme();
-
-  const {
-    country, setCountry,
+  
+  const { 
     preferredCurrency, setPreferredCurrency,
     fullName, resetOnboarding, role
   } = useOnboardingStore();
-
+  
   const { setProfile, setClientMode } = useUserStore();
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-
-  const COUNTRIES = ['Nigeria', 'Kenya', 'South Africa', 'Ghana', 'United Kingdom', 'United States', 'Canada'];
 
   const handleFinish = async () => {
     setLoading(true);
@@ -34,11 +31,12 @@ export default function ClientLocationScreen() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) throw new Error("Could not find user session");
 
-      const profileData = {
+      const profileData: Record<string, any> = {
         user_id: user.id,
         full_name: fullName || user.user_metadata?.full_name || '',
         role: role === 'client' ? 'Employer' : 'IT Support Specialist',
         default_mode: role,
+        preferred_currency: preferredCurrency || 'USD',
         points: 0,
         coins: 0
       };
@@ -53,7 +51,7 @@ export default function ClientLocationScreen() {
 
       setClientMode(true); // Client mode
       setSuccess(true);
-
+      
       // Delay navigation for celebration animation
       setTimeout(() => {
         setProfile(data);
@@ -90,8 +88,8 @@ export default function ClientLocationScreen() {
 
   return (
     <SafeAreaView className="flex-1" style={{ backgroundColor: colors.backgroundPrimary }}>
-      <View
-        style={{
+      <View 
+        style={{ 
           height: (Platform.OS === 'web' ? '100vh' : '100%') as any,
           overflow: 'hidden',
           display: 'flex',
@@ -103,13 +101,13 @@ export default function ClientLocationScreen() {
         {/* Fixed Header */}
         <View className="w-full max-w-xl mx-auto">
           <OnboardingProgress currentStep={6} totalSteps={6} onBack={() => router.push('/(auth)/onboarding/client/credentials')} />
-
+          
           <View className="mb-4">
             <Text className="font-inter-bold text-2xl md:text-3xl mb-1.5" style={{ color: colors.textPrimary }}>
-              Almost ready. Where are you based?
+              Choose your currency
             </Text>
             <Text className="font-inter text-xs md:text-sm" style={{ color: colors.textSecondary }}>
-              We use this to show you local IT professionals first.
+              Select the currency you want your account to use
             </Text>
           </View>
         </View>
@@ -117,58 +115,54 @@ export default function ClientLocationScreen() {
         {/* Scrollable Content Area */}
         <View className="flex-1 w-full max-w-xl mx-auto overflow-hidden px-2 py-2">
           <Animated.View entering={SlideInRight} exiting={SlideOutLeft} className="flex-1">
-            <ScrollView
-              className="flex-1"
+            <ScrollView 
+              className="flex-1" 
               showsVerticalScrollIndicator={false}
               keyboardShouldPersistTaps="handled"
             >
-              <View className="mb-6">
-                <Text className="font-inter-medium text-xs md:text-sm mb-2.5" style={{ color: colors.textPrimary }}>Country</Text>
-                <View className="border rounded-2xl overflow-hidden" style={{ borderColor: colors.border, backgroundColor: colors.cardSurface }}>
-                  {COUNTRIES.map((c, idx) => (
-                    <TouchableOpacity
-                      key={c}
-                      onPress={() => setCountry(c)}
-                      className="p-3.5 flex-row justify-between items-center"
-                      style={{ borderBottomWidth: idx < COUNTRIES.length - 1 ? 1 : 0, borderBottomColor: colors.border }}
-                    >
-                      <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>{c}</Text>
-                      {country === c && <Feather name="check" size={18} color={colors.accent} />}
-                    </TouchableOpacity>
-                  ))}
-                </View>
-              </View>
-
               <View className="mb-4">
-                <Text className="font-inter-medium text-xs md:text-sm mb-2.5" style={{ color: colors.textPrimary }}>💱 Currency preference</Text>
-
+                <Text className="font-inter-medium text-xs md:text-sm mb-2.5" style={{ color: colors.textPrimary }}>Currency</Text>
                 <View className="flex-col gap-3">
                   <TouchableOpacity
-                    onPress={() => setPreferredCurrency('NGN_USD')}
+                    onPress={() => setPreferredCurrency('USD' as any)}
                     className="p-4 rounded-xl border flex-row items-center"
-                    style={{
-                      backgroundColor: preferredCurrency === 'NGN_USD' ? activeBgColor : colors.cardSurface,
-                      borderColor: preferredCurrency === 'NGN_USD' ? colors.accent : colors.border
-                    }}
-                  >
-                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'NGN_USD' ? colors.accent : colors.border }}>
-                      {preferredCurrency === 'NGN_USD' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
-                    </View>
-                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Naira (₦) + Dollars ($)</Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity
-                    onPress={() => setPreferredCurrency('USD')}
-                    className="p-4 rounded-xl border flex-row items-center"
-                    style={{
-                      backgroundColor: preferredCurrency === 'USD' ? activeBgColor : colors.cardSurface,
-                      borderColor: preferredCurrency === 'USD' ? colors.accent : colors.border
+                    style={{ 
+                      backgroundColor: preferredCurrency === 'USD' ? activeBgColor : colors.cardSurface, 
+                      borderColor: preferredCurrency === 'USD' ? colors.accent : colors.border 
                     }}
                   >
                     <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'USD' ? colors.accent : colors.border }}>
                       {preferredCurrency === 'USD' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
                     </View>
-                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Dollars ($) only</Text>
+                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Dollar (USD)</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    onPress={() => setPreferredCurrency('NGN' as any)}
+                    className="p-4 rounded-xl border flex-row items-center"
+                    style={{ 
+                      backgroundColor: preferredCurrency === 'NGN' ? activeBgColor : colors.cardSurface, 
+                      borderColor: preferredCurrency === 'NGN' ? colors.accent : colors.border 
+                    }}
+                  >
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'NGN' ? colors.accent : colors.border }}>
+                      {preferredCurrency === 'NGN' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
+                    </View>
+                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Naira (NGN)</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    onPress={() => setPreferredCurrency('GBP' as any)}
+                    className="p-4 rounded-xl border flex-row items-center"
+                    style={{ 
+                      backgroundColor: preferredCurrency === 'GBP' ? activeBgColor : colors.cardSurface, 
+                      borderColor: preferredCurrency === 'GBP' ? colors.accent : colors.border 
+                    }}
+                  >
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'GBP' ? colors.accent : colors.border }}>
+                      {preferredCurrency === 'GBP' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
+                    </View>
+                    <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Pounds (GBP)</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -180,9 +174,9 @@ export default function ClientLocationScreen() {
         <View className="items-center py-2 w-full max-w-md mx-auto px-4">
           <TouchableOpacity
             className="w-full py-3.5 rounded-full items-center mb-4"
-            style={{
+            style={{ 
               backgroundColor: colors.accent,
-              opacity: loading ? 0.7 : 1
+              opacity: loading ? 0.7 : 1 
             }}
             disabled={loading}
             onPress={handleFinish}
