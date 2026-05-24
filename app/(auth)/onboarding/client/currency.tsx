@@ -10,7 +10,7 @@ import { supabase } from '@/lib/supabase';
 import { useUserStore } from '@/store/userStore';
 import Toast from 'react-native-toast-message';
 
-export default function CountryScreen() {
+export default function ClientCurrencyScreen() {
   const router = useRouter();
   const { colors } = useTheme();
   
@@ -23,7 +23,6 @@ export default function CountryScreen() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [selectedCurrency, setSelectedCurrency] = useState<string>('USD');
 
   const handleFinish = async () => {
     setLoading(true);
@@ -32,12 +31,11 @@ export default function CountryScreen() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) throw new Error("Could not find user session");
 
+      // Core profile upsert — only columns that are guaranteed to exist
       const profileData: Record<string, any> = {
         user_id: user.id,
         full_name: fullName || user.user_metadata?.full_name || '',
         role: role === 'client' ? 'Employer' : 'IT Support Specialist',
-        default_mode: role,
-        preferred_currency: selectedCurrency || 'USD',
         points: 0,
         coins: 0
       };
@@ -50,16 +48,35 @@ export default function CountryScreen() {
 
       if (error) throw error;
 
-      setClientMode(false);
+      // Best-effort: save preferred_currency separately
+      try {
+        await supabase
+          .from('profiles')
+          .update({ preferred_currency: preferredCurrency || 'USD' })
+          .eq('user_id', user.id);
+      } catch (e) {
+        console.warn('Failed to update preferred_currency:', e);
+      }
+
+      // Best-effort: save default_mode separately
+      try {
+        await supabase
+          .from('profiles')
+          .update({ default_mode: role })
+          .eq('user_id', user.id);
+      } catch (e) {
+        console.warn('Failed to update default_mode:', e);
+      }
+
+      setClientMode(true); // Client mode
       setSuccess(true);
       
       // Delay navigation for celebration animation
       setTimeout(() => {
-        setPreferredCurrency(selectedCurrency as any);
         setProfile(data);
         resetOnboarding();
         router.replace('/(tabs)');
-      }, 1500);
+      }, 2000);
 
     } catch (error: any) {
       Toast.show({ type: 'error', text1: 'Setup failed', text2: error.message });
@@ -70,17 +87,23 @@ export default function CountryScreen() {
   if (success) {
     return (
       <View className="flex-1 items-center justify-center" style={{ backgroundColor: colors.backgroundPrimary }}>
-        <Animated.View entering={FadeIn} className="items-center">
-          <View className="w-24 h-24 rounded-full items-center justify-center mb-6" style={{ backgroundColor: '#CCDF1A' }}>
-            <Feather name="check" size={48} color="#0B2D2C" />
+        <Animated.View entering={FadeIn} className="items-center px-8">
+          <View className="w-24 h-24 rounded-full items-center justify-center mb-6" style={{ backgroundColor: colors.accent }}>
+            <Feather name="check" size={48} color={colors.accentText} />
           </View>
-          <Text className="font-inter-bold text-2xl text-center" style={{ color: colors.textPrimary }}>
-            Welcome to Kryd!
+          <Text className="font-inter-bold text-2xl text-center mb-4" style={{ color: colors.textPrimary }}>
+            Welcome to Kryd.
+          </Text>
+          <Text className="font-inter text-base text-center" style={{ color: colors.textSecondary }}>
+            Your first great hire is one post away.
           </Text>
         </Animated.View>
       </View>
     );
   }
+
+  // Calculate active background color based on current accent
+  const activeBgColor = `${colors.accent}15`;
 
   return (
     <SafeAreaView className="flex-1" style={{ backgroundColor: colors.backgroundPrimary }}>
@@ -96,7 +119,7 @@ export default function CountryScreen() {
       >
         {/* Fixed Header */}
         <View className="w-full max-w-xl mx-auto">
-          <OnboardingProgress currentStep={7} totalSteps={7} onBack={() => router.push('/(auth)/onboarding/freelancer/credentials')} />
+          <OnboardingProgress currentStep={6} totalSteps={6} onBack={() => router.push('/(auth)/onboarding/client/credentials')} />
           
           <View className="mb-4">
             <Text className="font-inter-bold text-2xl md:text-3xl mb-1.5" style={{ color: colors.textPrimary }}>
@@ -114,47 +137,49 @@ export default function CountryScreen() {
             <ScrollView 
               className="flex-1" 
               showsVerticalScrollIndicator={false}
+              keyboardShouldPersistTaps="handled"
             >
               <View className="mb-4">
+                <Text className="font-inter-medium text-xs md:text-sm mb-2.5" style={{ color: colors.textPrimary }}>Currency</Text>
                 <View className="flex-col gap-3">
                   <TouchableOpacity
-                    onPress={() => setSelectedCurrency('USD')}
+                    onPress={() => setPreferredCurrency('USD' as any)}
                     className="p-4 rounded-xl border flex-row items-center"
                     style={{ 
-                      backgroundColor: selectedCurrency === 'USD' ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface, 
-                      borderColor: selectedCurrency === 'USD' ? '#CCDF1A' : colors.border 
+                      backgroundColor: preferredCurrency === 'USD' ? activeBgColor : colors.cardSurface, 
+                      borderColor: preferredCurrency === 'USD' ? colors.accent : colors.border 
                     }}
                   >
-                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: selectedCurrency === 'USD' ? '#CCDF1A' : colors.border }}>
-                      {selectedCurrency === 'USD' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />}
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'USD' ? colors.accent : colors.border }}>
+                      {preferredCurrency === 'USD' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
                     </View>
                     <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Dollar (USD)</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
-                    onPress={() => setSelectedCurrency('NGN')}
+                    onPress={() => setPreferredCurrency('NGN' as any)}
                     className="p-4 rounded-xl border flex-row items-center"
                     style={{ 
-                      backgroundColor: selectedCurrency === 'NGN' ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface, 
-                      borderColor: selectedCurrency === 'NGN' ? '#CCDF1A' : colors.border 
+                      backgroundColor: preferredCurrency === 'NGN' ? activeBgColor : colors.cardSurface, 
+                      borderColor: preferredCurrency === 'NGN' ? colors.accent : colors.border 
                     }}
                   >
-                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: selectedCurrency === 'NGN' ? '#CCDF1A' : colors.border }}>
-                      {selectedCurrency === 'NGN' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />}
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'NGN' ? colors.accent : colors.border }}>
+                      {preferredCurrency === 'NGN' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
                     </View>
                     <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Naira (NGN)</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
-                    onPress={() => setSelectedCurrency('GBP')}
+                    onPress={() => setPreferredCurrency('GBP' as any)}
                     className="p-4 rounded-xl border flex-row items-center"
                     style={{ 
-                      backgroundColor: selectedCurrency === 'GBP' ? 'rgba(204, 223, 26, 0.05)' : colors.cardSurface, 
-                      borderColor: selectedCurrency === 'GBP' ? '#CCDF1A' : colors.border 
+                      backgroundColor: preferredCurrency === 'GBP' ? activeBgColor : colors.cardSurface, 
+                      borderColor: preferredCurrency === 'GBP' ? colors.accent : colors.border 
                     }}
                   >
-                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: selectedCurrency === 'GBP' ? '#CCDF1A' : colors.border }}>
-                      {selectedCurrency === 'GBP' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#CCDF1A' }} />}
+                    <View className="w-5 h-5 rounded-full border-2 items-center justify-center mr-3" style={{ borderColor: preferredCurrency === 'GBP' ? colors.accent : colors.border }}>
+                      {preferredCurrency === 'GBP' && <View className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: colors.accent }} />}
                     </View>
                     <Text className="font-inter text-sm md:text-base" style={{ color: colors.textPrimary }}>Pounds (GBP)</Text>
                   </TouchableOpacity>
@@ -179,7 +204,7 @@ export default function CountryScreen() {
               <ActivityIndicator color={colors.accentText} />
             ) : (
               <Text className="font-inter-bold text-sm tracking-wider uppercase" style={{ color: colors.accentText }}>
-                Take me to Kryd →
+                Start hiring on Kryd →
               </Text>
             )}
           </TouchableOpacity>
@@ -188,4 +213,3 @@ export default function CountryScreen() {
     </SafeAreaView>
   );
 }
-

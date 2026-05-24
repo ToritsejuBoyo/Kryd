@@ -64,7 +64,7 @@ export default function ClientCredentialsScreen() {
         return;
       }
 
-      router.push('/(auth)/onboarding/client/location');
+      router.push('/(auth)/onboarding/client/currency');
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred.');
     } finally {
